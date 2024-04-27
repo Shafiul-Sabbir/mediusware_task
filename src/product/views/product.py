@@ -1,6 +1,6 @@
 from django.views import generic
 
-from product.models import Variant
+from product.models import Variant, Product
 
 
 class CreateProductView(generic.TemplateView):
@@ -12,3 +12,5 @@ class CreateProductView(generic.TemplateView):
         context['product'] = True
         context['variants'] = list(variants.all())
         return context
+    
+

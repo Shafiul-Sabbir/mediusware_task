@@ -11,6 +11,7 @@ urlpatterns = [
         redirect_authenticated_user=True,
         authentication_form=LoginForm
     ), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='login.html'), name='logout'),
+    path('logout/', auth_views.LogoutView.as_view(
+        template_name='logout.html',), name='logout'),
     path('dashboard/', DashboardView.as_view(), name='dashboard')
 ]

@@ -50,11 +50,16 @@
                         <th>Title</th>
                         <th>Description</th>
                         <th>Variant</th>
+                        <th>Price</th>
+                        <th>Date</th>
                         <th width="150px">Action</th>
                     </tr>
                     </thead>
 
                     <tbody>
+                        {% for pd in product %}
+                            {{pd.title}}
+                        {% endfor %}
                     <tr>
                         <td>1</td>
                         <td>T-Shirt <br> Created at : 25-Aug-2020</td>
